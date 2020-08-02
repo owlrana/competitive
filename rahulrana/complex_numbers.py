@@ -3,16 +3,24 @@
 inp1 = input()
 inp2 = input()
 
-#splitting the inputs into two parts, real [1] and imaginary [2] as a list
-split1 = inp1.split()
-split2 = inp2.split()
-
 #assigning values of real [1] and imaginary [2] parts into float variables
-real1 = split1[0]
-real2 = split2[0]
-imaginary1 = float(split1[1])
-imaginary2 = float(split2[1])
+real1 = float(inp1.split()[0])
+real2 = float(inp2.split()[0])
+imag1 = float(inp1.split()[1])
+imag2 = float(inp2.split()[1])
 
 #sanity check to see if the code is working
-#print(real1,'+',imaginary1,'i')
-#print(real2,'+',imaginary2,'i')
+print(real1,'+',imag1,'i')
+print(real2,'+',imag2,'i')
+
+#adding the numbers
+print(real1+real2, '+', imag1+imag2, 'i')
+
+#subtracting the numbers
+print(real1-real2, '-', imag1-imag2, 'i')
+
+#multplying the numbers
+print(real1*real2, '*', imag1*imag2, 'i')
+
+#dividing the numbers
+print(real1/real2, '/', imag1/imag2, 'i')
