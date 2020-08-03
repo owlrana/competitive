@@ -1,12 +1,20 @@
 #Practice file to check code while taking lectures and notes. Code available for the last lecture and last check only.
 
-man = {
-    'brain' : 85,
-    'voice' : 90,
-    'body' : 50,
-    'happy' : 20
-}
+purse = dict()
+purse['monkey'] = None
 
-man.body: 5
+value = input('Enter the value you want to store: ')
+key = input('Enter the name of the key to access it: ')
 
-print(man)
+if value == 'None':
+    value = None
+elif value == '':
+    value = 'DefaultValue'
+
+if key == '':
+    key = 'DefaultKey'
+
+purse[key] = value
+
+
+print(purse)
