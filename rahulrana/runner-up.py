@@ -4,7 +4,7 @@
 num = int(input())
 
 #analyse the input
-while num < 2 or not num < 10:    
+while num <= 2 or not num <= 10:    
     num = int(input())
 
 scores = input()    #input the scores with space bar in b/w
