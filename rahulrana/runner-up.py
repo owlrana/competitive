@@ -1,4 +1,5 @@
 #https://www.hackerrank.com/challenges/find-second-maximum-number-in-a-list/problem
+# wrong output in input: 1 -1 -2 -1; -7 -7 -7 -7 6; 57 57 -57 57;
 
 #take the input
 num = int(input())
