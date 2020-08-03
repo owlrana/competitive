@@ -7,9 +7,7 @@
 fname = input("Enter file name: ")
 fhandle = open(fname)
 
-lst = list()
 words_list = list()
-flag = False
 
 for line in fhandle:
     for realwords in line.split():
