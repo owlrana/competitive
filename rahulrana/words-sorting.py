@@ -12,12 +12,9 @@ words_list = list()
 flag = False
 
 for line in fhandle:
-    print(line.rstrip())
     for realwords in line.split():
-        for storedwords in words_list:
-            flag = False
-            if storedwords == realwords:
-                flag = True
-            else:
-                words_list.append(realwords)
-    print(words_list)
+        if not realwords in words_list:
+            words_list.append(realwords)
+
+words_list.sort()
+print(words_list)
