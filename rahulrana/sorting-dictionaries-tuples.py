@@ -1,4 +1,4 @@
-#Practice file to check code while taking lectures and notes. Code available for the last lecture and last check only.
+#As dictionaries do not give a f about the order, we have other ways to sort them by extracting data as tuples then sorting acc to key or values
 
 d = {'g': 4, 'e':40, 'h': 10, 'a': 9}
 
