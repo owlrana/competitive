@@ -1,17 +1,37 @@
 #Practice file to check code while taking lectures and notes. Code available for the last lecture and last check only.
 
-d = {'g': 4, 'e':40, 'h': 10, 'a': 9}
+#we can easily find the most common word by just a variable, but this is how one might find a SET of most common words
 
-#sorted by key
-for (k,v) in sorted(d.items()): #d.items() gives a list, which is sorted before looping
-    print( (k,v), end = '')
+#ask for the name of the file
+fname = input('Please enter the name of the file you want to find the 10 most common words from')
+if fname == '':
+    fname = 'romeo.txt'
+fhandle = open(fname)
 
-print()
+#now keep track of the words in a dictionary
+counts_dict = dict()
+for lines in fhandle:
+    words = lines.split()
+    for word in words:
+        counts_dict[word] = counts_dict.get(word, 0) + 1
 
-#sorted by value
-tmp = list()
-for k,v in d.items():
-    tmp.append( (v, k) ) #made a temporary copy of tuples of d dictionary data
-#sort the temporary list of tuples
-tmp = sorted(tmp, reverse = False)
-print(tmp)
+#THE CODE BELOW THIS CAN ALSO BE DONE IN JUST ONE LINE BY "LIST COMPREHENSION":
+#print( sorted( [  (v,k) for k,v in items() ] ) )
+
+#now create a list with reverse keys and values to sort and print by key
+tmp_list = list()
+for (key, value) in counts_dict.items():
+    tmp_list.append( (value, key) ) #exchanged the order
+
+#now sort the list of tuples
+tmp_list = sorted(tmp_list, reverse = True) #as we need keys in decreasing order
+
+sorted_list = list()
+for (value, key) in tmp_list:
+    sorted_list.append( (key, value) ) #exchanged the order
+
+print(sorted_list[:10]) #[] is index, we wanted till 10 (not including)
+
+#now print from 0 to 10 (not including 10)
+#for (value, key) in tmp_list[:10]: #tmp_list means all, [0:10] means 0 to 10
+#    print(key, value) #reversed the order again as the key/values were exchanged
