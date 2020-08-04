@@ -13,6 +13,9 @@ for lines in fhandle:
     for word in words:
         counts_dict[word] = counts_dict.get(word, 0) + 1
 
+#THE CODE BELOW THIS CAN ALSO BE DONE IN JUST ONE LINE BY "LIST COMPREHENSION":
+#print( sorted( [  (v,k) for k,v in items() ] ) )
+
 #now create a list with reverse keys and values to sort and print by key
 tmp_list = list()
 for (key, value) in counts_dict.items():
