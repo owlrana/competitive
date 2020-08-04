@@ -19,6 +19,7 @@ for line in handle:
         time = full_times[0]
         hour[time] = hour.get(time, 0) + 1
         
+tmp = sorted(hour.items())
 
-
-print(hour)
+for k,v in tmp:
+    print(k, v)
