@@ -2,6 +2,7 @@
 #So we dont have to follow just ASCII 128 or Japanese 
 #happened around 2000s due to the internet boom
 #UTF-8 is best method to encode data within networks
+#everything inside python is a string, if it is unicode or whatever
 
 print(ord('H'))
 print(ord('h'))
