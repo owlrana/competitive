@@ -7,7 +7,7 @@ servicourl = 'http://maps.googleapis.com/maps/api/geocode/json?' #gives us the j
 
 while True:
     address = input('Enter Location: ')
-    if len(address) > 1: break
+    if len(address) < 1: break
 
     url = servicourl + urllib.parse.urlencode({'address': address }) #gives back and concatenates the servicourl with given address
     # address spaces need to be turned to + and commans into % and other stuff that is done by this urrlib.parse.urlencode
@@ -25,7 +25,7 @@ while True:
 if not js or 'status' not in js or js['status'] != 'OK':
     print('=== Failure to Retreive ===')
     print(data)
-    
+    continue
 
 lat = js["results"][0]["geometry"]["location"]["lat"]
 lng = js["results"][0]["geometry"]["location"]["lng"]
