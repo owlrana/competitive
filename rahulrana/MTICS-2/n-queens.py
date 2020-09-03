@@ -1,4 +1,5 @@
 #To solve the N Queens problem with brute force technique (google the problem for more details)
+#Do not enter 13 or more, will take A LOT of time
 
 import itertools as it
 
@@ -9,7 +10,9 @@ def is_solution(perm):
 
     return True
 
-for perm in it.permutations(range(8)):
+boardSize = int(input('Please enter the size of the board: '))
+
+for perm in it.permutations(range(boardSize)):
     if is_solution(perm):
         print(perm)
         exit()
