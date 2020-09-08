@@ -1,4 +1,4 @@
-#program to give back the no. of change (5s and 7s) above 24 for given input
+#program to give back the no. of change (5s and 7s) above 24 for given input~
 
 def change( amount ):
     assert(amount >= 24)
