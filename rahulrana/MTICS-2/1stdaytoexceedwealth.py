@@ -15,4 +15,4 @@ def PrintFirstDay(starting_amount, earn_percent, target_amount):
 
 # Prints when you will get more than $1000000 for the first time, if you start with $1000
 # and earn 2% every day.
-PrintFirstDay(1000, 2, 1000000)
+PrintFirstDay(1000, 10, 1000000)
