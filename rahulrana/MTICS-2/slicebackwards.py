@@ -1,4 +1,4 @@
-#Reverse a string without using arrays (using string slicing)
+#Reverse a string with & without using arrays
 
 ##############################
 # You can either do this thing where we slice
