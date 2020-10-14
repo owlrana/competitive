@@ -1,2 +1,1 @@
-# Competitive
-Competitive Programming Progress
+# Python Skills Track
